@@ -13,6 +13,12 @@
   }
 }
 
+svg.App-logo path {
+  fill: transparent;
+  stroke-width: 21.55;
+  stroke-linecap: round;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
