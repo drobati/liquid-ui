@@ -1,31 +1,9 @@
 import React from "react"
 import { motion, useAnimation } from "framer-motion"
+import type { AnimationControls } from "framer-motion";
 
 interface Props {
   className: string;
-}
-
-interface ControlsAnimation {
-    start: (definition: ControlsAnimationDefinition, transitionOverride?: Transition) => Promise<void>;
-}
-
-interface ControlsAnimationDefinition {
-    pathLength?: number[] | number;
-    pathOffset?: number[] | number;
-    pathSpacing?: number[] | number;
-    transition?: object;
-    stroke?: string;
-}
-
-interface Transition {
-    delay?: number;
-    delayChildren?: number;
-    staggerChildren?: number;
-    staggerDirection?: number;
-    when?: false | "beforeChildren" | "afterChildren" | string;
-    repeat?: number;
-    repeatType?: "loop" | "reverse" | "mirror";
-    repeatDelay?: number;
 }
 
 function Logo(props: Props) {
@@ -44,7 +22,7 @@ function Logo(props: Props) {
 
     // This function runs an animation sequence on an oval’s AnimationControls
     // https://www.framer.com/api/motion/animation/#sequencing
-    async function sequence(animationControls: ControlsAnimation, delay = 0) {
+    async function sequence(animationControls: AnimationControls, delay = 0) {
         await animationControls.start({
             pathLength: 0.05,
             pathOffset: 1,

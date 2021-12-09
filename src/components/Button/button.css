@@ -1,30 +1,32 @@
 .liquid-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  @apply font-sans rounded-md border-0 cursor-pointer inline-block leading-none;
 }
-.liquid-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+.liquid-button--xs {
+  @apply text-base py-1 px-2;
 }
-.liquid-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+.liquid-button--sm {
+  @apply text-lg py-1.5 px-3;
 }
-.liquid-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+.liquid-button--md {
+  @apply text-xl py-2 px-4;
 }
-.liquid-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
+.liquid-button--lg {
+  @apply text-2xl py-2 px-4;
 }
-.liquid-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+.liquid-button--xl {
+  @apply text-3xl py-2 px-4;
+}
+.liquid-button--solid {
+  @apply bg-primary text-white border border-solid border-transparent;
+  box-shadow: 0 3px 0 rgba(var(--color-primary), 0.3);
+}
+.liquid-button--outline {
+  @apply bg-transparent text-primary border border-solid border-primary;
+  box-shadow: 0 3px 0 rgba(var(--color-primary), 0.3);
+}
+.liquid-button--ghost {
+  @apply border border-solid border-transparent text-primary;
+}
+.liquid-button--link {
+  @apply border border-solid border-transparent text-primary hover:underline;
 }
