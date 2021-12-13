@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+delete colors['lightBlue'] // stops warning to change to sky
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -10,16 +11,16 @@ module.exports = {
       transparent: 'transparent',
       primary: 'rgb(var(--color-primary))',
       success: 'rgb(var(--color-success))',
-      error: 'rgb(var(--color-error))',
+      error: 'rgb(var(--color-error))'
     },
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
-    },
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
