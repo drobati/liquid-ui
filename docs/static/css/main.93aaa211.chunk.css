@@ -664,10 +664,7 @@ video {
 }
 
 :root {
-  --color-primary: 28, 127, 255;
-  --color-secondary: 166, 125, 0;
-  --color-success: 0, 216, 81;
-  --color-error: 255, 77, 79;
+  --color-primary: 24, 113, 227;
 }
 
 body {
@@ -795,4 +792,4 @@ code {
 /* purgecss end ignore */
 
 
-/*# sourceMappingURL=main.d27fd926.chunk.css.map*/
+/*# sourceMappingURL=main.93aaa211.chunk.css.map*/
