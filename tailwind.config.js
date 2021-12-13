@@ -9,9 +9,7 @@ module.exports = {
     colors: {
       ...colors,
       transparent: 'transparent',
-      primary: 'rgb(var(--color-primary))',
-      success: 'rgb(var(--color-success))',
-      error: 'rgb(var(--color-error))'
+      primary: 'rgb(var(--color-primary))'
     },
     extend: {
       fontFamily: {
