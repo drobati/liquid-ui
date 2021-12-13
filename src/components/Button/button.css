@@ -1,32 +1,39 @@
 .liquid-button {
-  @apply font-sans rounded-md border-0 cursor-pointer inline-block leading-none;
+    @apply font-sans rounded-md border-0 cursor-pointer inline-block leading-none;
 }
+
 .liquid-button--xs {
-  @apply text-base py-1 px-2;
+    @apply text-xs font-medium px-2.5 py-1.5;
 }
+
 .liquid-button--sm {
-  @apply text-lg py-1.5 px-3;
+    @apply text-sm font-medium leading-4 px-3 py-2;
 }
+
 .liquid-button--md {
-  @apply text-xl py-2 px-4;
+    @apply text-sm px-4 py-2;
 }
+
 .liquid-button--lg {
-  @apply text-2xl py-2 px-4;
+    @apply text-base px-4 py-2;
 }
+
 .liquid-button--xl {
-  @apply text-3xl py-2 px-4;
+    @apply text-base px-6 py-3;
 }
+
 .liquid-button--solid {
-  @apply bg-primary text-white border border-solid border-transparent;
-  box-shadow: 0 3px 0 rgba(var(--color-primary), 0.3);
+    @apply bg-primary text-white border border-solid border-transparent;
 }
+
 .liquid-button--outline {
-  @apply bg-transparent text-primary border border-solid border-primary;
-  box-shadow: 0 3px 0 rgba(var(--color-primary), 0.3);
+    @apply text-primary border border-solid border-primary;
 }
+
 .liquid-button--ghost {
-  @apply border border-solid border-transparent text-primary;
+    @apply border border-solid border-transparent text-primary;
 }
+
 .liquid-button--link {
-  @apply border border-solid border-transparent text-primary hover:underline;
+    @apply border border-solid border-transparent text-primary hover:underline;
 }

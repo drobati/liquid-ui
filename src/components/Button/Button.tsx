@@ -53,15 +53,24 @@ export const Button = ({
     ...props
 }: ButtonProps) => {
     const normalizeColor = color ? convertColor(color) : primaryColor;
-    const boxShadow = (color && (variant === 'solid' || variant === 'outline'))
-        ? `0 3px 0 rgba(${ normalizeColor }, 0.3)`
-        : undefined;
-
+    let boxShadow, backgroundColor, borderColor, textColor = undefined;
+    if (variant === 'solid' || variant === 'outline') {
+        boxShadow = `0 3px 0 rgba(${ normalizeColor }, 0.3)`
+        if (variant === 'solid') {
+            backgroundColor = `rgb(${ normalizeColor })`;
+        } else {
+            borderColor = `rgb(${ normalizeColor })`;
+            textColor = `rgb(${ normalizeColor })`;
+        }
+    }
+    if (variant === 'ghost' || variant === 'link') {
+        textColor = `rgb(${ normalizeColor })`;
+    }
     return (
         <motion.button
             type="button"
             className={ ['liquid-button', `liquid-button--${ size }`, `liquid-button--${ variant }`].join(' ') }
-            style={ { backgroundColor: `rgb(${ normalizeColor })`, boxShadow } }
+            style={ { color: textColor, backgroundColor, boxShadow, borderColor } }
             whileHover={ { scale: 1.1 } }
             whileTap={ { scale: 0.9 } }
             { ...props }

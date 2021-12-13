@@ -11,6 +11,7 @@ specifiers:
   '@storybook/node-logger': ^6.4.9
   '@storybook/preset-create-react-app': ^3.2.0
   '@storybook/react': ^6.4.9
+  '@storybook/theming': ^6.4.9
   '@testing-library/jest-dom': ^5.11.4
   '@testing-library/react': ^11.1.0
   '@testing-library/user-event': ^12.1.10
@@ -55,6 +56,7 @@ devDependencies:
   '@storybook/node-logger': 6.4.9
   '@storybook/preset-create-react-app': 3.2.0_8959d610e27aeef2cba138db590bb1ec
   '@storybook/react': 6.4.9_882edbbe85bfb75ebec2143a0dfa6969
+  '@storybook/theming': 6.4.9_react-dom@17.0.2+react@17.0.2
   autoprefixer: 9.8.8
   postcss: 7.0.39
   storybook-preset-craco: 0.0.6_85265b8b199e78be599458cf4dbab4e7
