@@ -52,7 +52,7 @@ export const Button = ({
     children = 'Button',
     ...props
 }: ButtonProps) => {
-    const normalizeColor = convertColor(color)
+    const normalizeColor = color ? convertColor(color) : primaryColor;
     const boxShadow = (color && (variant === 'solid' || variant === 'outline'))
         ? `0 3px 0 rgba(${ normalizeColor }, 0.3)`
         : undefined;
