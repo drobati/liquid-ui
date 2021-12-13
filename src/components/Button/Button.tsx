@@ -25,19 +25,22 @@ interface ButtonProps {
     children?: React.ReactNode;
 }
 
+const primaryColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-primary');
+
 const convertColor = (color: string) => {
     const canvas = document.createElement('canvas');
     canvas.height = 1;
     canvas.width = 1;
     const context = canvas.getContext('2d');
     if (context) {
-        context.fillStyle = 'rgba(0, 0, 0, 0)';
+        context.fillStyle = `rgba(${ primaryColor }, 0.3)`;
         context.clearRect(0, 0, 1, 1);
-        context.fillStyle = color || '#000';
+        context.fillStyle = color
         context.fillRect(0, 0, 1, 1);
         return context.getImageData(0, 0, 1, 1).data.slice(0, 3).join(', ');
     }
-    return '0, 0, 0';
+    return primaryColor;
 }
 /**
  * Primary UI component for user interaction
@@ -49,15 +52,16 @@ export const Button = ({
     children = 'Button',
     ...props
 }: ButtonProps) => {
+    const normalizeColor = convertColor(color)
     const boxShadow = (color && (variant === 'solid' || variant === 'outline'))
-        ? `0 3px 0 rgba(${ convertColor(color) }, 0.3)`
+        ? `0 3px 0 rgba(${ normalizeColor }, 0.3)`
         : undefined;
 
     return (
         <motion.button
             type="button"
             className={ ['liquid-button', `liquid-button--${ size }`, `liquid-button--${ variant }`].join(' ') }
-            style={ { backgroundColor: color, boxShadow } }
+            style={ { backgroundColor: `rgb(${ normalizeColor })`, boxShadow } }
             whileHover={ { scale: 1.1 } }
             whileTap={ { scale: 0.9 } }
             { ...props }
