@@ -1,12 +1,15 @@
+const path = require("path/posix");
 module.exports = {
-  stories: [
-    '../src/**/*.stories.(js|jsx|ts|tsx|mdx)'
-  ],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
-    'storybook-preset-craco',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-a11y'
+    '@storybook/preset-create-react-app'
   ],
-  framework: '@storybook/react'
-}
+  framework: '@storybook/react',
+  core: {
+    builder: "webpack5"
+  },
+  staticDirs: ['../public']
+};
+
