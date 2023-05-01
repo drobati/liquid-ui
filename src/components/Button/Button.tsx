@@ -34,7 +34,7 @@ const convertColor = (color: string) => {
     canvas.width = 1;
     const context = canvas.getContext('2d');
     if (context) {
-        context.fillStyle = `rgba(${ primaryColor }, 0.3)`;
+        context.fillStyle = `rgb(${ primaryColor } / 0.3)`;
         context.clearRect(0, 0, 1, 1);
         context.fillStyle = color
         context.fillRect(0, 0, 1, 1);
