@@ -178,9 +178,54 @@ When adding a new component, ensure:
 
 ---
 
+## ShadCN/ui Integration Strategy
+
+[ShadCN/ui](https://ui.shadcn.com/) is a popular component collection that shares our tech stack (Tailwind CSS, TypeScript). Consider these integration approaches:
+
+### Option 1: Adopt ShadCN Patterns (Recommended)
+- Follow similar API conventions for familiarity
+- Use Radix UI primitives for complex components (Dialog, Dropdown, etc.)
+- Match the "copy-paste" philosophy where users own the code
+- Align with ShadCN's variant naming conventions
+
+### Option 2: Radix UI Foundation
+- Use Radix UI primitives as the accessibility layer
+- Add Framer Motion animations on top (our differentiator)
+- Keep Tailwind styling approach
+- Benefits: battle-tested accessibility, keyboard navigation, ARIA
+
+### Option 3: ShadCN Compatibility
+- Design components to work alongside ShadCN
+- Share the same CSS variable conventions
+- Allow users to mix Liquid UI and ShadCN components
+
+### Key Differences (Liquid UI vs ShadCN)
+| Aspect | Liquid UI | ShadCN |
+|--------|-----------|--------|
+| Animations | Framer Motion (rich) | CSS transitions |
+| Distribution | npm package | Copy/paste |
+| Primitives | Custom | Radix UI |
+| Customization | Props + CSS vars | Direct code edit |
+
+### Recommended Dependencies to Add
+```bash
+pnpm add @radix-ui/react-dialog @radix-ui/react-dropdown-menu
+pnpm add @radix-ui/react-select @radix-ui/react-tabs
+pnpm add @radix-ui/react-tooltip @radix-ui/react-popover
+```
+
+### Action Items
+- [ ] Evaluate Radix UI primitives for complex components
+- [ ] Align CSS variable naming with ShadCN conventions
+- [ ] Document migration path for ShadCN users
+- [ ] Consider class-variance-authority (cva) for variant management
+
+---
+
 ## Notes
 
 - Focus on quality over quantity - each component should be fully featured
 - Maintain consistent API patterns across all components
 - Prioritize accessibility from the start
 - Keep bundle size minimal with tree-shaking support
+- Consider ShadCN/ui patterns as a reference for user familiarity
