@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors')
 delete colors['lightBlue'] // stops warning to change to sky
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ['./src/**/*.{js,jsx,ts,tsx,mdx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
