@@ -1,0 +1,1 @@
+import{_ as a}from"./chunk-index-BmdT8L9e.js";import"./chunk-index-C6d52tmz.js";import"./chunk-_commonjsHelpers-CqkleIqs.js";const e={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{theme:a.dark}},tags:["autodocs"],initialGlobals:{backgrounds:{value:"transparent"}}};export{e as default};
