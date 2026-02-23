@@ -12,6 +12,15 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  async viteFinal(config) {
+    config.build = config.build || {};
+    config.build.rollupOptions = config.build.rollupOptions || {};
+    config.build.rollupOptions.output = {
+      ...(config.build.rollupOptions.output as object),
+      chunkFileNames: "assets/chunk-[name]-[hash].js",
+    };
+    return config;
+  },
 };
 
 export default config;
