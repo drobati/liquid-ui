@@ -23,16 +23,34 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build showcase app
+        run: pnpm build
+
       - name: Build Storybook
         run: pnpm build-storybook
+        env:
+          STORYBOOK_BASE: /docs/
 
-      - name: Add .nojekyll
-        run: touch docs-build/.nojekyll
+      - name: Assemble deploy folder
+        run: |
+          mkdir -p deploy
+          cp -r dist/* deploy/
+          cp -r docs-build deploy/docs
+          touch deploy/.nojekyll
+          echo "liquidui.dev" > deploy/CNAME
+
+      - name: Update Pages source to root
+        run: |
+          gh api repos/${{ github.repository }}/pages \
+            -X PUT \
+            -f source[branch]=gh-pages \
+            -f source[path]="/" || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: docs-build
+          folder: deploy
           clean: true
-          target-folder: docs

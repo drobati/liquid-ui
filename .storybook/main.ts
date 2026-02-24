@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     options: {},
   },
   async viteFinal(config) {
+    config.base = process.env.STORYBOOK_BASE ?? "/";
     config.build = config.build || {};
     config.build.rollupOptions = config.build.rollupOptions || {};
     config.build.rollupOptions.output = {
