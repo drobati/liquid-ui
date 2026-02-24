@@ -1,0 +1,1 @@
+import{r as s,o as a}from"./chunk-index-C6d52tmz.js";import{u}from"./chunk-index-kLBjVXXK.js";var i=a[" useId ".trim().toString()]||(()=>{}),d=0;function f(r){const[t,o]=s.useState(i());return u(()=>{o(e=>e??String(d++))},[r]),t?`radix-${t}`:""}export{f as u};
