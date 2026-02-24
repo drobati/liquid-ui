@@ -138,9 +138,9 @@ function App() {
         <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl shadow-[0_3px_0_oklch(0.35_0.15_264/0.15)]">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <div className="flex items-center gap-5">
-              <h1 className="text-xl font-extrabold tracking-tight liquid-wordmark">
-                Liquid
-              </h1>
+              <a href="/docs/" className="text-xl font-extrabold tracking-tight liquid-wordmark hover:opacity-80 transition-opacity">
+                Liquid UI
+              </a>
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
@@ -154,7 +154,7 @@ function App() {
               </Breadcrumb>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button variant="ghost" size="icon" onClick={toggleDark}>
