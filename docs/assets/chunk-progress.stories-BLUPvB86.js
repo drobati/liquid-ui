@@ -3,7 +3,7 @@ import{j as o}from"./chunk-jsx-runtime-D_zvdyIk.js";import{r as v}from"./chunk-i
   - less than the value passed to \`max\` (or ${f} if no \`max\` prop is set)
   - \`null\` or \`undefined\` if the progress is indeterminate.
 
-Defaulting to \`null\`.`}var L=A,J=M;const l=v.forwardRef(({className:e,value:r,...i},s)=>o.jsx(L,{ref:s,className:X("relative h-4 w-full overflow-hidden rounded-full bg-secondary shadow-[0_2px_0_rgba(0,0,0,0.08)]",e),...i,children:o.jsx(J,{className:"h-full w-full flex-1 bg-primary transition-all",style:{transform:`translateX(-${100-(r||0)}%)`}})}));l.displayName=L.displayName;l.__docgenInfo={description:"",methods:[]};const te={title:"Components/Progress",component:l,tags:["autodocs"],argTypes:{value:{control:{type:"range",min:0,max:100}}}},u={args:{value:60,className:"w-[300px]"}},c={args:{value:0,className:"w-[300px]"}},p={args:{value:100,className:"w-[300px]"}},m={render:()=>o.jsxs("div",{className:"flex flex-col gap-4 w-[300px]",children:[o.jsx(l,{value:20}),o.jsx(l,{value:50}),o.jsx(l,{value:80})]})};var N,w,b;u.parameters={...u.parameters,docs:{...(N=u.parameters)==null?void 0:N.docs,source:{originalSource:`{
+Defaulting to \`null\`.`}var L=A,J=M;const l=v.forwardRef(({className:e,value:r,...i},s)=>o.jsx(L,{ref:s,className:X("relative h-4 w-full overflow-hidden rounded-full bg-muted shadow-[0_2px_0_rgba(0,0,0,0.08)]",e),...i,children:o.jsx(J,{className:"h-full w-full flex-1 bg-primary transition-all",style:{transform:`translateX(-${100-(r||0)}%)`}})}));l.displayName=L.displayName;l.__docgenInfo={description:"",methods:[]};const te={title:"Components/Progress",component:l,tags:["autodocs"],argTypes:{value:{control:{type:"range",min:0,max:100}}}},u={args:{value:60,className:"w-[300px]"}},c={args:{value:0,className:"w-[300px]"}},m={args:{value:100,className:"w-[300px]"}},p={render:()=>o.jsxs("div",{className:"flex flex-col gap-4 w-[300px]",children:[o.jsx(l,{value:20}),o.jsx(l,{value:50}),o.jsx(l,{value:80})]})};var N,w,b;u.parameters={...u.parameters,docs:{...(N=u.parameters)==null?void 0:N.docs,source:{originalSource:`{
   args: {
     value: 60,
     className: "w-[300px]"
@@ -13,15 +13,15 @@ Defaulting to \`null\`.`}var L=A,J=M;const l=v.forwardRef(({className:e,value:r,
     value: 0,
     className: "w-[300px]"
   }
-}`,...(y=(_=c.parameters)==null?void 0:_.docs)==null?void 0:y.source}}};var j,E,$;p.parameters={...p.parameters,docs:{...(j=p.parameters)==null?void 0:j.docs,source:{originalSource:`{
+}`,...(y=(_=c.parameters)==null?void 0:_.docs)==null?void 0:y.source}}};var j,E,$;m.parameters={...m.parameters,docs:{...(j=m.parameters)==null?void 0:j.docs,source:{originalSource:`{
   args: {
     value: 100,
     className: "w-[300px]"
   }
-}`,...($=(E=p.parameters)==null?void 0:E.docs)==null?void 0:$.source}}};var I,R,S;m.parameters={...m.parameters,docs:{...(I=m.parameters)==null?void 0:I.docs,source:{originalSource:`{
+}`,...($=(E=m.parameters)==null?void 0:E.docs)==null?void 0:$.source}}};var I,R,S;p.parameters={...p.parameters,docs:{...(I=p.parameters)==null?void 0:I.docs,source:{originalSource:`{
   render: () => <div className="flex flex-col gap-4 w-[300px]">
       <Progress value={20} />
       <Progress value={50} />
       <Progress value={80} />
     </div>
-}`,...(S=(R=m.parameters)==null?void 0:R.docs)==null?void 0:S.source}}};const ne=["Default","Empty","Full","AllValues"];export{m as AllValues,u as Default,c as Empty,p as Full,ne as __namedExportsOrder,te as default};
+}`,...(S=(R=p.parameters)==null?void 0:R.docs)==null?void 0:S.source}}};const ne=["Default","Empty","Full","AllValues"];export{p as AllValues,u as Default,c as Empty,m as Full,ne as __namedExportsOrder,te as default};
