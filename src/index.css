@@ -40,7 +40,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --font-sans: "Inter var", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -130,4 +130,30 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Atmospheric background pattern */
+.liquid-bg {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, oklch(0.546 0.215 264 / 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, oklch(0.504 0.134 277 / 0.05), transparent);
+}
+.dark .liquid-bg {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, oklch(0.588 0.215 264 / 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, oklch(0.546 0.134 277 / 0.08), transparent);
+}
+
+/* Wordmark gradient */
+.liquid-wordmark {
+  background: linear-gradient(135deg, oklch(0.546 0.215 264), oklch(0.504 0.134 277));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark .liquid-wordmark {
+  background: linear-gradient(135deg, oklch(0.688 0.215 264), oklch(0.646 0.134 277));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
